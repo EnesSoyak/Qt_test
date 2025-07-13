@@ -32,8 +32,8 @@ void MyWidget::paintEvent(QPaintEvent *bilmemNe)  {
     // Qt::BevelJoin
     // Qt::RoundJoin
     // Qt::SvgMiterJoin
+
     
-    // sdjfsknsdanfk
 
     painter.setPen(pen);
     painter.drawLine(20, 20, width()-20, height()-20);

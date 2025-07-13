@@ -2,21 +2,39 @@
  
 
 MyWidget::MyWidget(QWidget *parent) : QWidget(parent) {
-    setMouseTracking(true);  // tıklama olmadan da hareketi algıla
-}
+    
 
- void MyWidget::mouseMoveEvent(QMouseEvent *event)  {
-    QPoint pos = event->pos();               // widget içindeki konum
-    qDebug() << "Mouse:" << pos;
-
-    lastPos = pos;                           // çizimde kullanılmak üzere kaydet
-    update();                                 // repaint tetikle
 }
 
 void MyWidget::paintEvent(QPaintEvent *bilmemNe)  {
     QPainter painter(this);
-    painter.setPen(Qt::blue);
-    painter.drawText(lastPos, "← Burada!");
-    painter.drawEllipse(lastPos, 5, 5);       // nokta çiz
-    painter.drawPoint(lastPos);
+    QPen pen;  // creates a default pen
+
+    pen.setStyle(Qt::SolidLine);
+    // Diğer stiller:
+    // Qt::NoPen
+    // Qt::SolidLine
+    // Qt::DashLine
+    // Qt::DotLine
+    // Qt::DashDotLine
+    // Qt::DashDotDotLine
+    // Qt::CustomDashLine
+    pen.setWidth(7);
+    pen.setBrush(Qt::green);
+    pen.setCapStyle(Qt::RoundCap);
+    // Diğer uç stilleri:
+    // Qt::FlatCap
+    // Qt::SquareCap
+    // Qt::RoundCap
+    pen.setJoinStyle(Qt::RoundJoin);
+    // Diğer birleştirme (join) stilleri:
+    // Qt::MiterJoin
+    // Qt::BevelJoin
+    // Qt::RoundJoin
+    // Qt::SvgMiterJoin
+    
+    // sdjfsknsdanfk
+
+    painter.setPen(pen);
+    painter.drawLine(20, 20, width()-20, height()-20);
 }

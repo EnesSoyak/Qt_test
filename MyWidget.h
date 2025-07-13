@@ -10,8 +10,8 @@ class MyWidget : public QWidget {
 
 public:
     MyWidget(QWidget *parent = nullptr);
+    
 protected:
-    void mouseMoveEvent(QMouseEvent *event) override ;
     void paintEvent(QPaintEvent *) override ;
 
 private:

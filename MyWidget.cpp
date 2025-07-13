@@ -33,6 +33,8 @@ void MyWidget::paintEvent(QPaintEvent *bilmemNe)  {
     // Qt::RoundJoin
     // Qt::SvgMiterJoin
 
+    // sadfadsfsdf
+
     
 
     painter.setPen(pen);
